@@ -1,0 +1,35 @@
+#browse-cta,
+#post-cta {
+  padding-block-start: var(--size-10);
+}
+
+.cta-article {
+  background-color: var(--green-0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-content {
+  display: flex;
+  align-items: center;
+  color: var(--gray-7);
+}
+.article-text {
+  flex: 1;
+}
+.article-title {
+  color: var(--indigo-10);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-8);
+  margin-block-end: var(--size-3);
+}
+
+.article-body {
+  font-size: var(--font-size-2);
+  line-height: var(--font-lineheight-3);
+}
+
+.article-img {
+  flex: 1;
+}
