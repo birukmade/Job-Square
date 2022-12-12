@@ -18,12 +18,12 @@
   --indigo-12: #21307a;
   --blue-3: #74c0fc;
   --size-12: 10rem;
-  --indigo-1: #dbe4ff;
+  --blue-1: #d0ebff;
   --size-1: .25rem;
   --indigo-10: #2f44ad;
-  --green-2: #b2f2bb;
+  --stone-1: #f2f4f6;
   --size-10: 5rem;
-  --green-1: #d3f9d8;
+  --green-0: #ebfbee;
   --gray-7: #495057;
   --font-size-5: 2rem;
   --font-weight-8: 800;
@@ -104,7 +104,7 @@ button:hover {
 }
 
 header {
-  background-color: var(--indigo-1);
+  background-color: var(--blue-1);
 }
 
 header .container {
@@ -132,7 +132,7 @@ header .container {
 }
 
 .nav-item a:hover {
-  background-color: var(--green-2);
+  background-color: var(--stone-1);
   border-radius: var(--radius-3);
 }
 
@@ -141,7 +141,7 @@ header .container {
 }
 
 .cta-article {
-  background-color: var(--green-1);
+  background-color: var(--green-0);
   display: flex;
   flex-direction: column;
   align-items: center;
