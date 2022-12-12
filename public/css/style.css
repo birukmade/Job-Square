@@ -23,12 +23,12 @@
   --indigo-10: #2f44ad;
   --stone-1: #f2f4f6;
   --size-10: 5rem;
+  --font-size-2: 1.1rem;
+  --font-lineheight-3: 1.5;
   --green-0: #ebfbee;
   --gray-7: #495057;
   --font-size-5: 2rem;
   --font-weight-8: 800;
-  --font-size-2: 1.1rem;
-  --font-lineheight-3: 1.5;
   --shadow-color: 220 3% 15%;
   --shadow-strength: 1%;
 }
@@ -97,9 +97,20 @@ button:hover {
   transform: translateY(-0.3rem);
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
 /* ----------------------------------------------------------------------------------------------------------- */
 
-#logo {
+#logo,
+#main-footer img {
   width: var(--size-12);
 }
 
@@ -113,9 +124,6 @@ header .container {
   align-items: center;
 }
 
-#main-nav {
-}
-
 #nav-items {
   display: flex;
 }
@@ -124,16 +132,65 @@ header .container {
   margin-inline: var(--size-3);
 }
 
-.nav-item a {
+.nav-item a,
+.socials a {
   font-weight: var(--font-weight-6);
   padding-block: var(--size-1);
   padding-inline: var(--size-5);
   color: var(--indigo-10);
 }
 
-.nav-item a:hover {
+.nav-item a:hover,
+.socials a:hover {
   background-color: var(--stone-1);
   border-radius: var(--radius-3);
+}
+
+.hamburger-menu {
+  background: inherit;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu i {
+  color: var(--indigo-10);
+}
+
+#main-footer {
+  -webkit-margin-before: var(--size-10);
+          margin-block-start: var(--size-10);
+  background: var(--blue-1);
+}
+
+#main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#copyright {
+  font-size: var(--font-size-2);
+  line-height: var(--font-lineheight-3);
+}
+
+.socials a {
+  padding-inline: var(--size-1);
+}
+
+@media (max-width: 48rem) {
+  #main-nav {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  #main-footer .container {
+    flex-direction: column;
+    gap: var(--size-3);
+  }
 }
 
 #browse-cta,
@@ -174,6 +231,24 @@ header .container {
 
 .article-img {
   flex: 1;
+}
+
+@media (max-width: 48rem) {
+  #browse-cta,
+  #post-cta {
+    -webkit-padding-before: var(--size-7);
+            padding-block-start: var(--size-7);
+  }
+
+  .article-content {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .article-img {
+    width: 100%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

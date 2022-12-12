@@ -33,3 +33,20 @@
 .article-img {
   flex: 1;
 }
+
+@media (max-width: 48rem) {
+  #browse-cta,
+  #post-cta {
+    padding-block-start: var(--size-7);
+  }
+
+  .article-content {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .article-img {
+    width: 100%;
+  }
+}

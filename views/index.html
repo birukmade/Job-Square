@@ -21,12 +21,13 @@
     <title>Jobsquare | where jobs find you!</title>
   </head>
   <body>
+    <div class="backdrop"></div>
     <header id="main-header">
       <div class="container">
         <a href="./index.html">
           <img src="/public/images/jobsquare-logo.png" alt="" id="logo" />
         </a>
-        <nav class="main-nav">
+        <nav id="main-nav">
           <ol id="nav-items">
             <li class="nav-item"><a href="/views/index.html">Home</a></li>
             <li class="nav-item"><a href="/views/browse.html">Browse</a></li>
@@ -34,6 +35,9 @@
             <li class="nav-item"><a href="/views/about.html">About</a></li>
           </ol>
         </nav>
+        <button class="hamburger-menu">
+          <i class="fa fas fa-bars fa-2x"></i>
+        </button>
       </div>
     </header>
     <main>
@@ -83,5 +87,18 @@
         </div>
       </section>
     </main>
+
+    <footer id="main-footer">
+      <div class="container">
+        <img src="/public/images/jobsquare-logo.png" alt="" />
+        <ol class="socials">
+          <a href=""><i class="fa-brands fa-twitter fa-2x"></i></a>
+          <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+          <a href=""><i class="fa-brands fa-youtube fa-2x"></i></a>
+        </ol>
+        <p id="copyright">all right recived &copy; JobSquare inc.</p>
+      </div>
+    </footer>
   </body>
 </html>
