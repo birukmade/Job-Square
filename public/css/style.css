@@ -1,3 +1,15 @@
+:root {
+  --size-5: 1.5rem;
+  --size-12: 10rem;
+  --cyan-0: #e3fafc;
+  --size-3: 1rem;
+  --font-weight-6: 600;
+  --size-1: .25rem;
+  --indigo-10: #2f44ad;
+  --green-3: #8ce99a;
+  --radius-3: 1rem;
+}
+
 *,
 *::before,
 *::after {
@@ -26,4 +38,48 @@ button {
 
 button:hover {
   outline: none;
+}
+
+/* utility classes */
+
+.container {
+  padding: var(--size-5);
+  max-width: min(70rem, 90%);
+  margin-inline: auto;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+#logo {
+  width: var(--size-12);
+}
+
+header .container {
+  background-color: var(--cyan-0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-nav {
+}
+
+#nav-items {
+  display: flex;
+}
+
+.nav-item {
+  margin-inline: var(--size-3);
+}
+
+.nav-item a {
+  font-weight: var(--font-weight-6);
+  padding-block: var(--size-1);
+  padding-inline: var(--size-5);
+  color: var(--indigo-10);
+}
+
+.nav-item a:hover {
+  background-color: var(--green-3);
+  border-radius: var(--radius-3);
 }
