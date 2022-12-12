@@ -29,6 +29,8 @@
   --gray-7: #495057;
   --font-size-5: 2rem;
   --font-weight-8: 800;
+  --size-2: .5rem;
+  --blue-10: #145591;
   --shadow-color: 220 3% 15%;
   --shadow-strength: 1%;
 }
@@ -252,6 +254,44 @@ header .container {
   .article-img {
     width: 100%;
   }
+}
+
+.job {
+  background-color: var(--green-0);
+  color: var(--gray-7);
+}
+
+.job-title {
+  font-size: var(--font-size-5);
+  margin-bottom: var(--size-2);
+}
+
+.job-source {
+  margin-bottom: var(--size-2);
+}
+
+.job-location {
+  margin-bottom: var(--size-5);
+}
+
+.job-description {
+  font-size: var(--font-size-2);
+  margin-bottom: var(--size-5);
+}
+
+.job-salary {
+  font-size: var(--font-size-2);
+  font-style: italic;
+  margin-bottom: var(--size-7);
+}
+
+.btn-read {
+  border: var(--border-size-1) var(--blue-10) solid;
+}
+
+.btn-read:hover {
+  background-color: var(--blue-3);
+  transform: scale(0.2);
 }
 
 @media (prefers-color-scheme: dark) {
