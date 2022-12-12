@@ -91,6 +91,7 @@ button:hover {
 
 .btn-cta {
   background: var(--blue-3);
+  margin-top: var(--size-5);
 }
 
 .btn:hover {
@@ -231,6 +232,7 @@ header .container {
 
 .article-img {
   flex: 1;
+  overflow: hidden;
 }
 
 @media (max-width: 48rem) {
@@ -244,6 +246,7 @@ header .container {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: var(--size-7);
   }
 
   .article-img {

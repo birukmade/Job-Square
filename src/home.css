@@ -32,6 +32,7 @@
 
 .article-img {
   flex: 1;
+  overflow: hidden;
 }
 
 @media (max-width: 48rem) {
@@ -44,6 +45,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: var(--size-7);
   }
 
   .article-img {
