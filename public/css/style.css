@@ -136,8 +136,10 @@ header .container {
   border-radius: var(--radius-3);
 }
 
-#browse-cta {
-  padding-block: var(--size-10);
+#browse-cta,
+#post-cta {
+  -webkit-padding-before: var(--size-10);
+          padding-block-start: var(--size-10);
 }
 
 .cta-article {
