@@ -350,7 +350,8 @@ button {
   background-color: var(--red-3);
 }
 
-.about-title {
+.about-title,
+.success-title {
   text-align: center;
   color: var(--indigo-10);
   font-size: var(--font-size-5);
@@ -359,7 +360,8 @@ button {
           margin-block-end: var(--size-3);
 }
 
-.about-text {
+.about-text,
+.success-msg {
   text-align: center;
   font-size: var(--font-size-2);
   line-height: var(--font-lineheight-3);
