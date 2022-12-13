@@ -11,18 +11,15 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "index.html");
-  res.sendFile(htmlFilePath);
+  res.render("index");
 });
 
 app.get("/jobs", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "browse.html");
-  res.sendFile(htmlFilePath);
+  res.render("browse");
 });
 
 app.get("/post", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "post.html");
-  res.sendFile(htmlFilePath);
+  res.render("post");
 });
 
 app.post("/post", function (req, res) {
@@ -38,13 +35,11 @@ app.post("/post", function (req, res) {
 });
 
 app.get("/about", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "about.html");
-  res.sendFile(htmlFilePath);
+  res.render("about");
 });
 
 app.get("/confirm", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "confirm.html");
-  res.sendFile(htmlFilePath);
+  res.render("confirm");
 });
 
 app.listen(3000);
