@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "postcss-build": "postcss ./src/style.css -o ./public/css/style.css",
-    "postcss-watch": "postcss ./src/style.css -o ./public/css/style.css --watch"
+    "postcss-watch": "postcss ./src/style.css -o ./public/css/style.css --watch",
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "nodemon": "^2.0.20",
     "open-props": "^1.5.1",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
