@@ -18,4 +18,9 @@ app.get("/post", function (req, res) {
   res.sendFile(htmlFilePath);
 });
 
+app.get("/about", function (req, res) {
+  const htmlFilePath = path.join(__dirname, "views", "about.html");
+  res.sendFile(htmlFilePath);
+});
+
 app.listen(3000);
