@@ -1,0 +1,41 @@
+form {
+  max-width: min(90%, 30rem);
+  margin-inline: auto;
+  padding-inline: var(--size-7);
+  padding-block: var(--size-5);
+  border: var(--border-size-1) var(--gray-2) solid;
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-4);
+  background-color: var(--green-0);
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+  margin-block-end: var(--size-5);
+}
+label {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+}
+input,
+textarea {
+  font-size: var(--font-size-2);
+  padding-block: var(--size-1);
+  padding-inline: var(--size-3);
+  border: 1px solid var(--gray-4);
+  border-radius: var(--radius-2);
+  color: var(--gray-7);
+}
+
+button {
+  border: var(--border-size-1) var(--blue-10) solid;
+}
+
+.submit:hover {
+  background-color: var(--blue-3);
+}
+
+.cancel:hover {
+  background-color: var(--red-3);
+}

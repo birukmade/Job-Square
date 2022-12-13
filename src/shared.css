@@ -25,9 +25,16 @@ button {
   font: inherit;
 }
 
-button:hover {
+button:hover,
+input:focus,
+textarea:focus {
   outline: none;
 }
+
+textarea {
+  resize: none;
+}
+
 /* utility classes */
 .container {
   padding: var(--size-5);
