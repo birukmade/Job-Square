@@ -343,6 +343,8 @@ header .container {
 }
 
 form {
+  -webkit-margin-before: var(--size-10);
+          margin-block-start: var(--size-10);
   max-width: min(90%, 30rem);
   margin-inline: auto;
   padding-inline: var(--size-7);
