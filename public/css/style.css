@@ -17,8 +17,8 @@
   --radius-4: 2rem;
   --indigo-12: #21307a;
   --blue-3: #74c0fc;
-  --size-12: 10rem;
   --blue-1: #d0ebff;
+  --size-12: 10rem;
   --size-1: .25rem;
   --indigo-10: #2f44ad;
   --stone-1: #f2f4f6;
@@ -126,13 +126,18 @@ textarea {
 
 /* ----------------------------------------------------------------------------------------------------------- */
 
+header {
+  background-color: var(--blue-1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 #logo,
 #main-footer img {
   width: var(--size-12);
-}
-
-header {
-  background-color: var(--blue-1);
 }
 
 header .container {
