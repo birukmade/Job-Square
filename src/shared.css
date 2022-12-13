@@ -80,7 +80,9 @@ textarea {
   right: 0;
   background-color: rgba(0, 0, 0, 0.3);
   display: none;
+  z-index: 15;
 }
+
 /* ----------------------------------------------------------------------------------------------------------- */
 header {
   background-color: var(--blue-1);
@@ -190,5 +192,13 @@ header .container {
   #main-footer .container {
     flex-direction: column;
     gap: var(--size-3);
+  }
+
+  #side-drawer.expand {
+    display: block;
+  }
+
+  .backdrop.expand {
+    display: block;
   }
 }
