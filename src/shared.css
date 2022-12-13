@@ -145,6 +145,7 @@ header .container {
   width: 50vh;
   background-color: var(--blue-1);
   z-index: 20;
+  display: none;
 }
 .mobile-hamburger-menu {
   margin-inline-start: var(--size-7);

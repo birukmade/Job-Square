@@ -189,6 +189,7 @@ header .container {
   width: 50vh;
   background-color: var(--blue-1);
   z-index: 20;
+  display: none;
 }
 
 .mobile-hamburger-menu {
@@ -389,7 +390,8 @@ button {
 
 .about-title,
 .success-title {
-  text-align: center;
+  -webkit-margin-before: var(--size-10);
+          margin-block-start: var(--size-10);
   color: var(--indigo-10);
   font-size: var(--font-size-5);
   font-weight: var(--font-weight-8);
@@ -399,7 +401,6 @@ button {
 
 .about-text,
 .success-msg {
-  text-align: center;
   font-size: var(--font-size-2);
   line-height: var(--font-lineheight-3);
 }
