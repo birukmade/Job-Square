@@ -15,7 +15,10 @@ app.get("/", function (req, res) {
 });
 
 app.get("/jobs", function (req, res) {
-  res.render("browse");
+  const filePath = path.join(__dirname, "data", "jobs.json");
+  const fileData = fs.readFileSync(filePath);
+  const postedJobs = JSON.parse(fileData);
+  res.render("browse", { jobs: postedJobs, numberOfJobs: postedJobs.length });
 });
 
 app.get("/post", function (req, res) {
@@ -24,7 +27,6 @@ app.get("/post", function (req, res) {
 
 app.post("/post", function (req, res) {
   const job = req.body;
-  console.log(job);
   const filePath = path.join(__dirname, "data", "jobs.json");
   const fileData = fs.readFileSync(filePath);
   const postedJobs = JSON.parse(fileData);
