@@ -1,65 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Jobsquare | where jobs find you!</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/app.js" defer></script>
+    <%- include ("./includes/head") %>
   </head>
   <body>
     <div class="backdrop"></div>
-    <header id="main-header">
-      <div class="container">
-        <a href="/">
-          <img src="/images/jobsquare-logo.png" alt="" id="logo" />
-        </a>
-        <nav id="main-nav">
-          <ol id="nav-items">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="/jobs">Browse</a></li>
-            <li class="nav-item"><a href="/post">Post</a></li>
-            <li class="nav-item"><a href="/about">About</a></li>
-          </ol>
-        </nav>
-        <button class="hamburger-menu desktop-hamburger-menu">
-          <i class="fa fas fa-bars fa-2x"></i>
-        </button>
-      </div>
-    </header>
-    <aside id="side-drawer">
-      <button class="hamburger-menu mobile-hamburger-menu">
-        <i class="fa fas fa-bars fa-2x"></i>
-      </button>
-      <nav id="mobile-nav">
-        <ol id="mobile-nav-items">
-          <li class="mobile-nav-item">
-            <a href="/">Home</a>
-          </li>
-          <li class="mobile-nav-item">
-            <a href="/jobs">Browse</a>
-          </li>
-          <li class="mobile-nav-item"><a href="/post">Post</a></li>
-          <li class="mobile-nav-item">
-            <a href="/about">About</a>
-          </li>
-        </ol>
-      </nav>
-    </aside>
+    <%- include ("./includes/header") %> <%- include ("./includes/side-drawer")
+    %>
     <main>
       <div class="container">
         <h2 class="about-title">Success</h2>
@@ -69,17 +16,6 @@
       </div>
     </main>
 
-    <footer id="main-footer">
-      <div class="container">
-        <img src="/images/jobsquare-logo.png" alt="" />
-        <ol class="socials">
-          <a href=""><i class="fa-brands fa-twitter fa-2x"></i></a>
-          <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
-          <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
-          <a href=""><i class="fa-brands fa-youtube fa-2x"></i></a>
-        </ol>
-        <p id="copyright">all rights recived &copy; JobSquare inc.</p>
-      </div>
-    </footer>
+    <%- include ("./includes/footer") %>
   </body>
 </html>
