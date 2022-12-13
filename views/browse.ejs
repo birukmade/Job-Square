@@ -11,16 +11,8 @@
         <% if (numberOfJobs === 0) { %>
         <h2 class="about-title">No jobs found</h2>
         <p>Unfortunately, No Jobs are posted yet. Try again latter</p>
-        <% } else {%> <% for (const job of jobs) { %>
-        <div class="job box">
-          <h2 class="job-title"><%= job.jobtitle %></h2>
-          <h3 class="job-source"><%= job.companyname %> tional PLC</h3>
-          <h3 class="job-location"><%= job.location %></h3>
-          <p class="job-description"><%= job.jobdescription %></p>
-          <h3 class="job-salary"><%= job.salary %></h3>
-          <a href="" class="btn btn-read">Read More</a>
-        </div>
-        <% } %> <% } %>
+        <% } else {%> <% for (const job of jobs) { %> <%- include
+        ("./includes/job-item", {job:job}) %> <% } %> <% } %>
       </div>
     </main>
 
