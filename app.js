@@ -12,4 +12,10 @@ app.get("/jobs", function (req, res) {
   const htmlFilePath = path.join(__dirname, "views", "browse.html");
   res.sendFile(htmlFilePath);
 });
+
+app.get("/post", function (req, res) {
+  const htmlFilePath = path.join(__dirname, "views", "post.html");
+  res.sendFile(htmlFilePath);
+});
+
 app.listen(3000);
