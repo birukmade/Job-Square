@@ -33,6 +33,8 @@ app.get("/jobs/:id", function (req, res) {
       return res.render("job-detail", { job: job });
     }
   }
+
+  res.render("404");
 });
 
 app.get("/post", function (req, res) {
@@ -59,4 +61,7 @@ app.get("/confirm", function (req, res) {
   res.render("confirm");
 });
 
+app.use(function (req, res) {
+  res.render("404");
+});
 app.listen(3000);
