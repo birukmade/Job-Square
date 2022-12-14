@@ -64,4 +64,8 @@ app.get("/confirm", function (req, res) {
 app.use(function (req, res) {
   res.render("404");
 });
+
+app.use(function (error, req, res, next) {
+  res.render("505");
+});
 app.listen(3000);
