@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("./includes/head") %>
+  </head>
+  <body>
+    <%- include ("./includes/header") %> <%- include ("./includes/side-drawer")
+    %>
+    <main>
+      <div class="container">
+        <h2 class="job-title about-title"><%= job.jobtitle %></h2>
+        <h3 class="job-source"><%= job.companyname %></h3>
+        <h3 class="job-location"><%= job.location %></h3>
+        <p class="job-description"><%= job.jobdescription %></p>
+        <h3 class="job-salary"><%= job.salary %></h3>
+        <p class="job-description"><%= job.contact %></p>
+        <p class="job-description"><%= job.email %></p>
+      </div>
+    </main>
+
+    <%- include ("./includes/footer") %>
+  </body>
+</html>

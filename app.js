@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+const uuid = require("uuid");
 
 const app = express();
 app.set("views", path.join(__dirname, "views"));
@@ -21,12 +22,26 @@ app.get("/jobs", function (req, res) {
   res.render("browse", { jobs: postedJobs, numberOfJobs: postedJobs.length });
 });
 
+app.get("/jobs/:id", function (req, res) {
+  const jobId = req.params.id;
+  const filePath = path.join(__dirname, "data", "jobs.json");
+  const fileData = fs.readFileSync(filePath);
+  const postedJobs = JSON.parse(fileData);
+
+  for (const job of postedJobs) {
+    if (job.id === jobId) {
+      return res.render("job-detail", { job: job });
+    }
+  }
+});
+
 app.get("/post", function (req, res) {
   res.render("post");
 });
 
 app.post("/post", function (req, res) {
   const job = req.body;
+  job.id = uuid.v4();
   const filePath = path.join(__dirname, "data", "jobs.json");
   const fileData = fs.readFileSync(filePath);
   const postedJobs = JSON.parse(fileData);
