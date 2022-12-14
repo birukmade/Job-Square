@@ -21,6 +21,11 @@ app.get("/jobs", function (req, res) {
   res.render("browse", { jobs: postedJobs, numberOfJobs: postedJobs.length });
 });
 
+app.get("/jobs/:id", function (req, res) {
+  const jobId = req.params.id;
+  res.render("job-detail", { id: jobId });
+});
+
 app.get("/post", function (req, res) {
   res.render("post");
 });
