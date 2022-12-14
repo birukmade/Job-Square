@@ -24,7 +24,15 @@ app.get("/jobs", function (req, res) {
 
 app.get("/jobs/:id", function (req, res) {
   const jobId = req.params.id;
-  res.render("job-detail", { id: jobId });
+  const filePath = path.join(__dirname, "data", "jobs.json");
+  const fileData = fs.readFileSync(filePath);
+  const postedJobs = JSON.parse(fileData);
+
+  for (const job of postedJobs) {
+    if (job.id === jobId) {
+      return res.render("job-detail", { job: job });
+    }
+  }
 });
 
 app.get("/post", function (req, res) {
